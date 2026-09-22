@@ -33,7 +33,15 @@ public class Alumno {
     }
 
     public void setTipoDocumento(String tipoDocumento) {
-        this.tipoDocumento = tipoDocumento;
+        
+        if (tipoDocumento.equalsIgnoreCase("DNI") ||
+            tipoDocumento.equalsIgnoreCase("Residencia Temporal")) {
+            
+            this.tipoDocumento = tipoDocumento;
+            
+        } else {
+            System.out.println("Tipo de documento no valido");
+        }
     }
 
     public String getNumeroDocumento() {
@@ -41,7 +49,29 @@ public class Alumno {
     }
 
     public void setNumeroDocumento(String numeroDocumento) {
-        this.numeroDocumento = numeroDocumento;
+        
+        if (tipoDocumento != null) {
+            
+            if (tipoDocumento.equalsIgnoreCase("DNI")) {
+                
+                if (numeroDocumento.matches("[0-9]{8}")) {
+                    this.numeroDocumento = numeroDocumento;
+                } else {
+                    System.out.println("El DNI debe tener 8 digitos");
+                }
+                
+            } else if (tipoDocumento.equalsIgnoreCase("Residencia Temporal")) {
+                
+                if (numeroDocumento.matches("[0-9]{11}")) {
+                    this.numeroDocumento = numeroDocumento;
+                } else {
+                    System.out.println("La Residencia Temporal debe tener 11 digitos");
+                }
+            }
+            
+        } else {
+            System.out.println("Primero debe ingresar un tipo de documento valido");
+        }
     }
 
     public String getNivelSocioeconomico() {
@@ -49,7 +79,16 @@ public class Alumno {
     }
 
     public void setNivelSocioeconomico(String nivelSocioeconomico) {
-        this.nivelSocioeconomico = nivelSocioeconomico;
+        
+        if (nivelSocioeconomico.equalsIgnoreCase("A") ||
+            nivelSocioeconomico.equalsIgnoreCase("B") ||
+            nivelSocioeconomico.equalsIgnoreCase("C")) {
+            
+            this.nivelSocioeconomico = nivelSocioeconomico.toUpperCase();
+            
+        } else {
+            System.out.println("Nivel socioeconomico no valido");
+        }
     }
 
     public String getTipoBeca() {
@@ -57,8 +96,16 @@ public class Alumno {
     }
 
     public void setTipoBeca(String tipoBeca) {
-        this.tipoBeca = tipoBeca;
+        
+        if (tipoBeca.equalsIgnoreCase("Ninguna") ||
+            tipoBeca.equalsIgnoreCase("Parcial") ||
+            tipoBeca.equalsIgnoreCase("Total")) {
+            
+            this.tipoBeca = tipoBeca;
+            
+        } else {
+            System.out.println("Tipo de beca no valido");
+        }
     }
-    
     
 }
