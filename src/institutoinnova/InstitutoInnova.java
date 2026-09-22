@@ -14,7 +14,12 @@ public class InstitutoInnova {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
-    }
-    
-}
+        
+        Alumno alumno1 = new Alumno();
+        
+        alumno1.setNombre("Juan Perez");
+        alumno1.setTipoDocumento("DNI");
+        alumno1.setNumeroDocumento("12345678");
+        alumno1.setNivelSocioeconomico("A");
+        alumno1.setTipoBeca("Parcial");
+        
