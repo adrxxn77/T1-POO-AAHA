@@ -19,6 +19,46 @@ public class Alumno {
     public Alumno() {
         
     }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getTipoDocumento() {
+        return tipoDocumento;
+    }
+
+    public void setTipoDocumento(String tipoDocumento) {
+        this.tipoDocumento = tipoDocumento;
+    }
+
+    public String getNumeroDocumento() {
+        return numeroDocumento;
+    }
+
+    public void setNumeroDocumento(String numeroDocumento) {
+        this.numeroDocumento = numeroDocumento;
+    }
+
+    public String getNivelSocioeconomico() {
+        return nivelSocioeconomico;
+    }
+
+    public void setNivelSocioeconomico(String nivelSocioeconomico) {
+        this.nivelSocioeconomico = nivelSocioeconomico;
+    }
+
+    public String getTipoBeca() {
+        return tipoBeca;
+    }
+
+    public void setTipoBeca(String tipoBeca) {
+        this.tipoBeca = tipoBeca;
+    }
     
     
 }
