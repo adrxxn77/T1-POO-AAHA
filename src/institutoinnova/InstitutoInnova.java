@@ -4,6 +4,8 @@
  */
 package institutoinnova;
 
+import java.util.Scanner;
+
 /**
  *
  * @author herre
@@ -15,14 +17,26 @@ public class InstitutoInnova {
      */
     public static void main(String[] args) {
         
+        Scanner teclado = new Scanner(System.in);
+        
         Alumno alumno1 = new Alumno();
         
-        alumno1.setNombre("Juan Perez");
-        alumno1.setTipoDocumento("DNI");
-        alumno1.setNumeroDocumento("12345678");
-        alumno1.setNivelSocioeconomico("A");
-        alumno1.setTipoBeca("Parcial");
+        System.out.print("Ingrese el nombre: ");
+        alumno1.setNombre(teclado.nextLine());
         
+        System.out.print("Ingrese el tipo de documento: ");
+        alumno1.setTipoDocumento(teclado.nextLine());
+        
+        System.out.print("Ingrese el numero de documento: ");
+        alumno1.setNumeroDocumento(teclado.nextLine());
+        
+        System.out.print("Ingrese el nivel socioeconomico: ");
+        alumno1.setNivelSocioeconomico(teclado.nextLine());
+        
+        System.out.print("Ingrese el tipo de beca: ");
+        alumno1.setTipoBeca(teclado.nextLine());
+        
+        System.out.println("\n--- DATOS DEL ALUMNO ---");
         System.out.println("Nombre: " + alumno1.getNombre());
         System.out.println("Tipo de documento: " + alumno1.getTipoDocumento());
         System.out.println("Numero de documento: " + alumno1.getNumeroDocumento());
