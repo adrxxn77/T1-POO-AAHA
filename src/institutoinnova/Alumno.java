@@ -1,13 +1,5 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package institutoinnova;
 
-/**
- *
- * @author herre
- */
 public class Alumno {
     
     private String nombre;
@@ -117,21 +109,17 @@ public class Alumno {
             return false;
         }
     }
-    
+
     public double calcularPension(double pensionBase) {
         
         if (tipoBeca.equalsIgnoreCase("Parcial")) {
-            
             return pensionBase * 0.50;
             
         } else if (tipoBeca.equalsIgnoreCase("Total")) {
-            
             return 0;
             
         } else {
-            
             return pensionBase;
         }
     }
-    
 }

@@ -1,21 +1,25 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package institutoinnova;
 
 import java.util.ArrayList;
 
-/**
- *
- * @author herre
- */
 public class AlumnoControlador {
     
     private ArrayList<Alumno> listaAlumnos = new ArrayList<>();
     
     public void agregarAlumno(Alumno alumno) {
         listaAlumnos.add(alumno);
+    }
+    
+    public boolean existeDocumento(String numeroDocumento) {
+        
+        for (int i = 0; i < listaAlumnos.size(); i++) {
+            
+            if (listaAlumnos.get(i).getNumeroDocumento().equals(numeroDocumento)) {
+                return true;
+            }
+        }
+        
+        return false;
     }
     
     public void listarAlumnos() {
@@ -37,5 +41,4 @@ public class AlumnoControlador {
             }
         }
     }
-    
 }

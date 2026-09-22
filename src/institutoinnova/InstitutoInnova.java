@@ -34,7 +34,6 @@ public class InstitutoInnova {
                         System.out.print("Ingrese el nombre: ");
                         alumno.setNombre(teclado.nextLine());
 
-
                         boolean tipoCorrecto = false;
 
                         while (tipoCorrecto == false) {
@@ -44,7 +43,6 @@ public class InstitutoInnova {
 
                             tipoCorrecto = alumno.setTipoDocumento(tipoDocumento);
                         }
-
 
                         boolean documentoCorrecto = false;
 
@@ -63,7 +61,6 @@ public class InstitutoInnova {
                             }
                         }
 
-
                         boolean nivelCorrecto = false;
 
                         while (nivelCorrecto == false) {
@@ -73,7 +70,6 @@ public class InstitutoInnova {
 
                             nivelCorrecto = alumno.setNivelSocioeconomico(nivel);
                         }
-
 
                         boolean becaCorrecta = false;
 
@@ -85,13 +81,11 @@ public class InstitutoInnova {
                             becaCorrecta = alumno.setTipoBeca(beca);
                         }
 
-
                         controlador.agregarAlumno(alumno);
 
                         System.out.println("\nAlumno registrado correctamente.");
 
                         break;
-
 
                     case 2:
 
@@ -101,13 +95,11 @@ public class InstitutoInnova {
 
                         break;
 
-
                     case 3:
 
                         System.out.println("\nPrograma finalizado.");
 
                         break;
-
 
                     default:
 
