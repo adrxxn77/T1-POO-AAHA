@@ -23,3 +23,11 @@ public class InstitutoInnova {
         alumno1.setNivelSocioeconomico("A");
         alumno1.setTipoBeca("Parcial");
         
+        System.out.println("Nombre: " + alumno1.getNombre());
+        System.out.println("Tipo de documento: " + alumno1.getTipoDocumento());
+        System.out.println("Numero de documento: " + alumno1.getNumeroDocumento());
+        System.out.println("Nivel socioeconomico: " + alumno1.getNivelSocioeconomico());
+        System.out.println("Tipo de beca: " + alumno1.getTipoBeca());
+    }
+    
+}
